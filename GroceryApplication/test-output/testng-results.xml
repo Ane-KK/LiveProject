@@ -1,61 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-11T07:38:06 IST" name="Default suite" finished-at="2026-05-11T07:38:16 IST" duration-ms="9643">
+  <suite started-at="2026-05-17T09:13:16 IST" name="Default suite" finished-at="2026-05-17T09:13:20 IST" duration-ms="3222">
     <groups>
     </groups>
-    <test started-at="2026-05-11T07:38:06 IST" name="Default test" finished-at="2026-05-11T07:38:16 IST" duration-ms="9643">
-      <class name="testScripts.LoginTest">
-        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:testScripts.LoginTest@2a3b5b47]" started-at="2026-05-11T07:38:06 IST" name="browserLaunch" finished-at="2026-05-11T07:38:07 IST" duration-ms="1521" status="PASS">
+    <test started-at="2026-05-17T09:13:16 IST" name="Default test" finished-at="2026-05-17T09:13:20 IST" duration-ms="3222">
+      <class name="testScripts.AdminUserTest">
+        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:testScripts.AdminUserTest@18078bef]" started-at="2026-05-17T09:13:17 IST" name="browserLaunch" finished-at="2026-05-17T09:13:18 IST" duration-ms="1472" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunch -->
-        <test-method signature="verifyInvalidUsernameInvalidPassword()[pri:0, instance:testScripts.LoginTest@2a3b5b47]" started-at="2026-05-11T07:38:07 IST" name="verifyInvalidUsernameInvalidPassword" finished-at="2026-05-11T07:38:08 IST" duration-ms="592" status="PASS">
+        <test-method signature="resetUserAfterSearch()[pri:0, instance:testScripts.AdminUserTest@18078bef]" started-at="2026-05-17T09:13:18 IST" name="resetUserAfterSearch" finished-at="2026-05-17T09:13:20 IST" duration-ms="1602" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found
+  (Session info: chrome=148.0.7778.168)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e02105aa1276599bdf5fb8a7bd23644f, clickElement {id=f.F22C992F7BCABAEFC1529CBE5A6F1B5B.d.865BCA288A3AB0D51B27336A2F768921.e.77}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\anees\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59316}, goog:processID: 27652, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59316/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e02105aa1276599bdf5fb8a7bd23644f)] -> xpath: //a[text()='Reset' and @class='btn btn-default btn-fix']//parent::div[@class='card-body']]
+Session ID: e02105aa1276599bdf5fb8a7bd23644f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=148.0.7778.168)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e02105aa1276599bdf5fb8a7bd23644f, clickElement {id=f.F22C992F7BCABAEFC1529CBE5A6F1B5B.d.865BCA288A3AB0D51B27336A2F768921.e.77}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\anees\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59316}, goog:processID: 27652, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59316/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e02105aa1276599bdf5fb8a7bd23644f)] -> xpath: //a[text()='Reset' and @class='btn btn-default btn-fix']//parent::div[@class='card-body']]
+Session ID: e02105aa1276599bdf5fb8a7bd23644f
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+at pages.AdminUserPage.resetUser(AdminUserPage.java:76)
+at testScripts.AdminUserTest.resetUserAfterSearch(AdminUserTest.java:82)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyInvalidUsernameInvalidPassword -->
-        <test-method is-config="true" signature="browserCloseAndQuit()[pri:0, instance:testScripts.LoginTest@2a3b5b47]" started-at="2026-05-11T07:38:08 IST" name="browserCloseAndQuit" finished-at="2026-05-11T07:38:08 IST" duration-ms="136" status="PASS">
+        </test-method> <!-- resetUserAfterSearch -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.AdminUserTest@18078bef]" started-at="2026-05-17T09:13:20 IST" name="driverQuit" finished-at="2026-05-17T09:13:20 IST" duration-ms="106" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=resetUserAfterSearch status=FAILURE method=AdminUserTest.resetUserAfterSearch()[pri:0, instance:testScripts.AdminUserTest@18078bef] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserCloseAndQuit -->
-        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:testScripts.LoginTest@2a3b5b47]" started-at="2026-05-11T07:38:08 IST" name="browserLaunch" finished-at="2026-05-11T07:38:09 IST" duration-ms="1176" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserLaunch -->
-        <test-method signature="verifyInvalidUsernameValidPassword()[pri:0, instance:testScripts.LoginTest@2a3b5b47]" started-at="2026-05-11T07:38:09 IST" name="verifyInvalidUsernameValidPassword" finished-at="2026-05-11T07:38:10 IST" duration-ms="310" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyInvalidUsernameValidPassword -->
-        <test-method is-config="true" signature="browserCloseAndQuit()[pri:0, instance:testScripts.LoginTest@2a3b5b47]" started-at="2026-05-11T07:38:10 IST" name="browserCloseAndQuit" finished-at="2026-05-11T07:38:10 IST" duration-ms="136" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserCloseAndQuit -->
-        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:testScripts.LoginTest@2a3b5b47]" started-at="2026-05-11T07:38:10 IST" name="browserLaunch" finished-at="2026-05-11T07:38:12 IST" duration-ms="2514" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserLaunch -->
-        <test-method signature="verifyLoginValidUsernameInvalidPassword()[pri:0, instance:testScripts.LoginTest@2a3b5b47]" started-at="2026-05-11T07:38:12 IST" name="verifyLoginValidUsernameInvalidPassword" finished-at="2026-05-11T07:38:13 IST" duration-ms="597" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginValidUsernameInvalidPassword -->
-        <test-method is-config="true" signature="browserCloseAndQuit()[pri:0, instance:testScripts.LoginTest@2a3b5b47]" started-at="2026-05-11T07:38:13 IST" name="browserCloseAndQuit" finished-at="2026-05-11T07:38:14 IST" duration-ms="837" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserCloseAndQuit -->
-        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:testScripts.LoginTest@2a3b5b47]" started-at="2026-05-11T07:38:14 IST" name="browserLaunch" finished-at="2026-05-11T07:38:15 IST" duration-ms="1484" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserLaunch -->
-        <test-method signature="verifyUserLoginWithValidCredentials()[pri:0, instance:testScripts.LoginTest@2a3b5b47]" started-at="2026-05-11T07:38:15 IST" name="verifyUserLoginWithValidCredentials" finished-at="2026-05-11T07:38:15 IST" duration-ms="169" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserLoginWithValidCredentials -->
-        <test-method is-config="true" signature="browserCloseAndQuit()[pri:0, instance:testScripts.LoginTest@2a3b5b47]" started-at="2026-05-11T07:38:15 IST" name="browserCloseAndQuit" finished-at="2026-05-11T07:38:16 IST" duration-ms="138" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserCloseAndQuit -->
-      </class> <!-- testScripts.LoginTest -->
+        </test-method> <!-- driverQuit -->
+      </class> <!-- testScripts.AdminUserTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
