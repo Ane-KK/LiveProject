@@ -9,6 +9,7 @@ import pages.AdminUserPage;
 import pages.HomePage;
 import pages.LoginPage;
 import utitilities.ExcelUtility;
+import utitilities.FakerUtility;
 
 public class AdminUserTest extends Base{
 	
@@ -17,6 +18,7 @@ public class AdminUserTest extends Base{
 	{
 		String usernamevalue=ExcelUtility.readStringData(0, 0, "LoginPage");
 		String passwordvalue=ExcelUtility.readStringData(0, 1, "LoginPage");
+		
 		
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsernameInUsernanefield(usernamevalue);
@@ -27,8 +29,13 @@ public class AdminUserTest extends Base{
 		home.clickAdminUserMoreInfo();
 		
 		
-		String newuser=ExcelUtility.readStringData(0, 0, "HomePage");
-		String userpassword=ExcelUtility.readStringData(0, 0, "HomePage");
+		//String newuser=ExcelUtility.readStringData(0, 0, "HomePage");
+		//String userpassword=ExcelUtility.readStringData(0, 0, "HomePage");
+		
+		FakerUtility faker=new FakerUtility();
+		String newuser=faker.createRandomUserName();
+		String userpassword=faker.createRandomPassword();
+		
 		AdminUserPage admin=new AdminUserPage(driver);
 		admin.newUserbutton();
 		admin.enterUsernameInUsernanefield(newuser);

@@ -23,7 +23,7 @@ public class AdminUserPage {
 	@FindBy(id="un")WebElement searchUsername;
 	@FindBy(id="ut")WebElement searchdropdownType;
 	@FindBy(xpath="//button[@name='Search' and @value='sr']")WebElement searchButton;
-	@FindBy(xpath="//a[text()='Reset' and @class='btn btn-default btn-fix']//parent::div[@class='card-body']")WebElement userReset;
+	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']")WebElement userReset;
 	
 
 	public void newUserbutton()
