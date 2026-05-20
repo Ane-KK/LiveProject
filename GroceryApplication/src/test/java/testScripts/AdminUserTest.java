@@ -47,7 +47,7 @@ public class AdminUserTest extends Base{
 	}
 	
 	@Test
-	public void VerifyUserSearchAfterUserCreation() throws IOException
+	public void verifyUserSearchAfterUserCreation() throws IOException
 	{
 		
 		String usernamevalue=ExcelUtility.readStringData(0, 0, "LoginPage");
