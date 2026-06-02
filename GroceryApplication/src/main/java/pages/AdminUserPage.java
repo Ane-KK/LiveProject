@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import utitilities.PageUtility;
+
 public class AdminUserPage {
 	
 	public WebDriver driver;
@@ -26,54 +28,69 @@ public class AdminUserPage {
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']")WebElement userReset;
 	
 
-	public void newUserbutton()
+	public AdminUserPage newUserbutton()
 	{
 		newUser.click();
+		return this;
 	}
-	public void enterUsernameInUsernanefield(String usernamevalue)
+	public AdminUserPage enterUsernameInUsernanefield(String usernamevalue)
 	{
 		enterUsername.sendKeys(usernamevalue);
+		return this;
 	}
-	public void enterPasswordInPasswordfield(String passwordvalue)
+	public AdminUserPage enterPasswordInPasswordfield(String passwordvalue)
 	{
 		enterPassword.sendKeys(passwordvalue);
-	}
-	
-	public void selectUserType()
-	{
-		Select select= new Select(dropdownType);
-		select.selectByVisibleText("Admin");
-	}
-
-	public void saveClick()
-	{
-		clickSave.click();
-	}
-	
-	public void searchUser()
-	{
-		search.click();
-	}
-	public void searchname(String usernamevalue)
-	{
-		searchUsername.sendKeys(usernamevalue);
-	}
-	
-	public void searchUserType()
-	{
-		Select select= new Select(searchdropdownType);
-		select.selectByVisibleText("Admin");
-	}
-	
-	public void searchUserButton()
-	{
-		searchButton.click();
+		return this;
 		
 	}
 	
-	public void resetUser()
+	public AdminUserPage selectUserType()
+	{
+		PageUtility page=new PageUtility();
+		page.selectDropdownByVisibleText(dropdownType, "Admin");
+		
+		//Select select= new Select(dropdownType);
+		//select.selectByVisibleText("Admin");
+		
+		return this;
+	}
+
+	public AdminUserPage saveClick()
+	{
+		clickSave.click();
+		return this;
+	}
+	
+	public AdminUserPage searchUser()
+	{
+		search.click();
+		return this;
+	}
+	public AdminUserPage searchname(String usernamevalue)
+	{
+		searchUsername.sendKeys(usernamevalue);
+		return this;
+	}
+	
+	public AdminUserPage searchUserType()
+	{
+		Select select= new Select(searchdropdownType);
+		select.selectByVisibleText("Admin");
+		return this;
+	}
+	
+	public AdminUserPage searchUserButton()
+	{
+		searchButton.click();
+		return this;
+		
+	}
+	
+	public AdminUserPage resetUser()
 	{
 		userReset.click();
+		return this;
 	}
 }
 

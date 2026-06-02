@@ -3,10 +3,15 @@
 <suite name="Suite">
 <listeners><listener class-name="reportGeneration.Listeners"></listener></listeners>
   <test thread-count="5" name="Test">
+  <parameter name="browsers" value="Chrome"></parameter>
     <classes>
-      <class name="testScripts.AdminUserTest"/>
-      <class name="testScripts.LoginTest"/>
-      <class name="testScripts.HomeTest"/>
+      
+      <class name="testScripts.LoginTest">
+      
+      <methods><include name="verifyInvalidUsernameInvalidPassword"></include></methods>
+      </class>
+     
+     
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

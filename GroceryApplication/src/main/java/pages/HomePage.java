@@ -17,19 +17,29 @@ public class HomePage {
 	//@FindBy(xpath="//div[@class='icon']//following::a[@class='small-box-footer' ][1]")WebElement adminUserMoreInfo;
 	//@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin']")WebElement adminUserMoreInfo;
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and text()='More info ']")WebElement adminUserMoreInfo;
-	public void clickAdmin()
+	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and text()='More info ']")WebElement ManageNewsInfo;
+	public HomePage clickAdmin()
 	{
 		admin.click();
+		return this;
 	}
 	
-	public void clickAdminUserMoreInfo()
+	public AdminUserPage clickAdminUserMoreInfo()
 	{
 		adminUserMoreInfo.click();
+		return new AdminUserPage(driver);
 	}
 	
-	public void clickLogout()
+	public ManageNewsPage clickManageNewsInfo()
+	{
+		ManageNewsInfo.click();
+		return new ManageNewsPage(driver);
+	}
+	
+	public LoginPage clickLogout()
 	{
 		logout.click();
+		return new LoginPage(driver);
 	}
 }
 

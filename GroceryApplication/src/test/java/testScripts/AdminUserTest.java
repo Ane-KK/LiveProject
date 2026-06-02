@@ -13,6 +13,9 @@ import utitilities.FakerUtility;
 
 public class AdminUserTest extends Base{
 	
+	AdminUserPage admin;
+	HomePage home;
+	
 	@Test
 	public void verifyNewUserCreationAfterSuccesfullLogin() throws IOException
 	{
@@ -21,12 +24,11 @@ public class AdminUserTest extends Base{
 		
 		
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsernameInUsernanefield(usernamevalue);
-		loginpage.enterPasswordInPasswordfield(passwordvalue);
-		loginpage.loginButtonClick();
-		HomePage home= new HomePage(driver);
+		loginpage.enterUsernameInUsernanefield(usernamevalue).enterPasswordInPasswordfield(passwordvalue);
+		home=loginpage.loginButtonClick();
+		//HomePage home= new HomePage(driver);
 		//home.clickAdmin();
-		home.clickAdminUserMoreInfo();
+		admin=home.clickAdminUserMoreInfo();
 		
 		
 		//String newuser=ExcelUtility.readStringData(0, 0, "HomePage");
@@ -36,13 +38,9 @@ public class AdminUserTest extends Base{
 		String newuser=faker.createRandomUserName();
 		String userpassword=faker.createRandomPassword();
 		
-		AdminUserPage admin=new AdminUserPage(driver);
-		admin.newUserbutton();
-		admin.enterUsernameInUsernanefield(newuser);
-		admin.enterPasswordInPasswordfield(userpassword);
-		admin.selectUserType();
-		admin.saveClick();
-		
+		//AdminUserPage admin=new AdminUserPage(driver);
+		admin.newUserbutton().enterUsernameInUsernanefield(newuser).enterPasswordInPasswordfield(userpassword).selectUserType().saveClick();
+			
 		//home.clickLogout();
 	}
 	
@@ -54,18 +52,15 @@ public class AdminUserTest extends Base{
 		String passwordvalue=ExcelUtility.readStringData(0, 1, "LoginPage");
 		
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsernameInUsernanefield(usernamevalue);
-		loginpage.enterPasswordInPasswordfield(passwordvalue);
-		loginpage.loginButtonClick();
-		HomePage home= new HomePage(driver);
-		home.clickAdminUserMoreInfo();
+		loginpage.enterUsernameInUsernanefield(usernamevalue).enterPasswordInPasswordfield(passwordvalue);
+		home=loginpage.loginButtonClick();
+		//HomePage home= new HomePage(driver);
+		admin=home.clickAdminUserMoreInfo();
 		
 		String newuser=ExcelUtility.readStringData(0, 0, "HomePage");
-		AdminUserPage admin=new AdminUserPage(driver);
-		admin.searchUser();
-		admin.searchname(newuser);
-		admin.searchUserType();
-		admin.searchUserButton();
+		//AdminUserPage admin=new AdminUserPage(driver);
+		admin.searchUser().searchname(newuser).searchUserType().searchUserButton();
+				
 	}
 	@Test
 	public void resetUserAfterSearch() throws IOException
@@ -76,17 +71,14 @@ public class AdminUserTest extends Base{
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsernameInUsernanefield(usernamevalue);
 		loginpage.enterPasswordInPasswordfield(passwordvalue);
-		loginpage.loginButtonClick();
-		HomePage home= new HomePage(driver);
-		home.clickAdminUserMoreInfo();
+		home=loginpage.loginButtonClick();
+		//HomePage home= new HomePage(driver);
+		admin=home.clickAdminUserMoreInfo();
 		
 		String newuser=ExcelUtility.readStringData(0, 0, "HomePage");
-		AdminUserPage admin=new AdminUserPage(driver);
-		admin.searchUser();
-		admin.searchname(newuser);
-		admin.searchUserType();
-		admin.searchUserButton();
-		admin.resetUser();
+		//AdminUserPage admin=new AdminUserPage(driver);
+		admin.searchUser().searchname(newuser).searchUserType().searchUserButton().resetUser();
+			
 	}
 
 	

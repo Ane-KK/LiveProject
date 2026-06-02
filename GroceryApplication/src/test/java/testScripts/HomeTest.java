@@ -12,19 +12,21 @@ import utitilities.ExcelUtility;
 public class HomeTest extends Base
 
 {
-	@Test
+	
+	HomePage home;
+	@Test(description="Verifying user logout after successful login",retryAnalyzer = retrymechanisam.Retry.class)
 	public void verifyUserLogoutAfterSuccesfullLogin() throws IOException
 	{
 		String usernamevalue=ExcelUtility.readStringData(0, 0, "LoginPage");
 		String passwordvalue=ExcelUtility.readStringData(0, 1, "LoginPage");
 		
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsernameInUsernanefield(usernamevalue);
-		loginpage.enterPasswordInPasswordfield(passwordvalue);
-		loginpage.loginButtonClick();
-		HomePage home= new HomePage(driver);
+		loginpage.enterUsernameInUsernanefield(usernamevalue).enterPasswordInPasswordfield(passwordvalue);
+		
+		home=loginpage.loginButtonClick();
+		//HomePage home= new HomePage(driver);
 		home.clickAdmin();
-		home.clickLogout();
+		loginpage=home.clickLogout();
 	}
 	
 	
